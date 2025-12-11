@@ -1,0 +1,25 @@
+version: "3.1"
+
+stories:
+
+- story: Tell a Joke
+  steps:
+  - intent: ask_joke
+  - action: utter_ask_joke
+  - action: action_tell_joke
+
+
+- story: Comfort user until happy
+  steps:
+    - intent: mood_sad
+    - action: utter_mood_sad
+    - slot_was_set:
+        - feels_better: false
+    - action: action_listen
+    - intent: mood_sad
+    - action: utter_mood_sad
+    - slot_was_set:
+        - feels_better: false
+    - action: action_listen
+    - intent: mood_better
+    - action: utter_mood_happy

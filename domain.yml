@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_joke
+  - mood_sad
+  - mood_better
+
+  
+
+responses:
+  utter_greet:
+    - text: "Sup! How you doin'?"
+    - text: "Hey! You good, cuz?"
+    - text: "Yoo! You good, fam?"
+    - text: "Hey girl! How you doin'?"
+    - text: "Hi hun! Need some help?"
+
+  utter_ask_joke:
+    - text: "I got you! Here it comes."
+    - text: "Put your laughing jeans on for this!"
+    - text: "Girl, you gon' love this!"
+    - text: "You not ready! For real, for real."
+    - text: "I got a good one, honey!"
+  
+  utter_mood_sad:
+    - text: "Honey, you are precious and loved. Tell me why you feel like that"
+    - text: "Oh pumpkin, there aint nothing wrong with ya. Please, if your comfortable, what's wrong"
+    - text: "Oh baby, you are too precious to be feeling like this, whats wrong hunny"
+    - text: "You got the most beautiful soul, you gotta open your eyes. I love you, and so does everyone else"
+    - text: "oh my gosh sweetheart, what's making you feel this way"
+    - text: "Honeybun, your feelings matter, and I care about them. What's troubling you"
+    - text: "Honey, you are soo brave for tellling me this. You are such a strong person"
+
+  utter_mood_happy:
+    - text: "<3"
+
+    
+slots:
+  feels_better:
+    type: bool
+    influence_conversation: true
+    initial_value: false
+    mappings:
+      - type: from_intent
+        intent: mood_better
+        value: true
+      - type: from_intent
+        intent: mood_sad
+        value: false
+
+
+
+actions:
+  - action_tell_joke
+#  - check_restaurant_availability
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,85 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hey
+    - hi
+    - sup
+    - how are you doing
+    - hello
+    - Good morning
+    - Good afternoon
+    - Good evening
+    - Hiyaa
+    - hey bestie
+    - yo
+    - wassup
+    - heyyy
+    - hiiiii
+    - hi bestie
+    - hey girl
+    - hey boo
+    - hey hun
+    - heyyy friend
+    - yo
+
+- intent: ask_joke
+  examples: |
+    - Tell me a joke
+    - Tell me something funny
+    - I need a laugh
+    - Tell me something silly
+    - Got a joke?
+    - Make me giggle
+    - Gimme a joke
+    - Hit me with a joke
+    - Please tell me something funny
+    - pls tell me a good joke
+    - jokes anyone
+    - Make me laugh, girl
+    - Yo bestie, hit me with a joke
+
+- intent: mood_sad
+  examples: |
+    - I feel ugly
+    - I look fat
+    - I'm too skinny
+    - I hate myself
+    - I'm soo ugly
+    - I am the worst
+    - no one loves me
+    - I feel worthless
+    - I look horrible
+    - I can't stop comparing myself
+    - I feel insecure
+    - I look terrible today
+    - I am not good enough
+    - I feel invisible
+    - I hate how I look
+    - I feel like a failure
+    - I feel unattractive
+    - I feel unlovable
+    - Nobody appreciates me
+
+
+- intent: mood_better
+  examples: |
+    - I feel soo much better now, thank you
+    - Thank you
+    - I feel lighter
+    - I feel relieved
+    - Thank you, I feel better
+    - I feel calm now
+    - I feel happy again
+    - I feel like myself again
+    - I feel more relaxed
+    - I feel at peace now
+    - That really helped, thank you
+    - I feel more positive
+    - I feel better talking to you
+    - Thank you soo much, I feel better
+    - I really needed to hear that
+    - I feel so much better now
+    - I feel more like myself
+    - That helped a lot

@@ -1,0 +1,23 @@
+version: "3.1"
+
+flows:
+
+- name: Comfort until user feels better
+  steps:
+    - intent: mood_sad
+    - action: utter_mood_sad
+    - wait_for_user_input: true
+
+    - condition:
+        - slot: feels_better
+          value: false
+      steps:
+        - action: utter_mood_sad
+        - wait_for_user_input: true
+        - goto: condition 
+
+    - condition:
+        - slot: feels_better
+          value: true
+      steps:
+        - action: utter_mood_happy
